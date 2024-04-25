@@ -20,9 +20,13 @@ public class Employee {
         Employee emp1 = new Employee("Manisangh", 121, 9999999, "Microsoft");
         Employee emp2 = new Employee("Radhika", 122, 99999990, "Google");
         Employee emp3 = new Employee("Megha", 123, 988688, "Walmart");
-
+        
         System.out.println(emp1.getDetails());
         System.out.println(emp2.getDetails());
         System.out.println(emp3.getDetails());
+
+        System.out.println(emp1.hashCode());
     }
 }
+
+
