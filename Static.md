@@ -88,3 +88,24 @@ class test {
 Hello Bro
 Hello
 ```
+
+# Static Import 
+
+- Static import is used to import static members of a class.
+
+- Objects can be accessed without using the class name.
+
+```java
+
+import static java.lang.Math.*;
+class test {
+    public static void main(String[] args) {
+            System.out.println(sqrt(4));
+        }
+    }
+
+```
+
+- In the above code, we have imported the static method sqrt of the Math class.
+- We can access the sqrt method without using the class name Math.
+- Otherwise, we need to use `Math.sqrt(4)` to access the sqrt method.
