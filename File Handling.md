@@ -55,3 +55,5 @@
 
 - `close()` method is used to close the output stream.
 
+
+# Q. 
