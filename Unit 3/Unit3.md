@@ -314,6 +314,81 @@ public interface AutoCloseable {
 }
 ```
 
+- Example of a try-with-resources statement.
+
+```java
+try(
+    FileReader fr = new FileReader("test.txt");
+    BufferedReader br = new BufferedReader(fr);
+)
+{
+    String str;
+    while((str = br.readLine()) != null){
+        System.out.println(str);
+    }
+}
+```
+
+# Base64 Encoding and Decoding
+
+- Java8 provides a class `java.util.Base64` to deal with Base64 encoding and decoding.
+- The techniques to encode and decode data include `MIME`, `Base` and `URL`.
+
+# Basic Base64 Encoding and Decoding
+
+## Encoding a string
+    
+```java
+String str = "Hello, World!";
+String encodedString = Base64.getEncoder().encodeToString(str.getBytes());
+```
+
+## Decoding a string
+
+```java
+byte[] decodedBytes = Base64.getDecoder().decode(encodedString);
+String decodedString = new String(decodedBytes);
+```
+
+### Base64 Encoding without Padding
+
+- The `withoutPadding()` method is used to encode the string without padding.
+
+- In java8, base64 encoding requires the string to be a multiple of 4 in length.
+
+- If the length of the string is not a multiple of 4, then the string is padded with `=`.
+
+```java
+String str = "Hello, World!";
+String encodedString = Base64.getEncoder().withoutPadding().encodeToString(str.getBytes());
+```
+
+- The output will be:
+  
+```
+SGVsbG8sIFdvcmxk!
+```
+
+# Base64 Encoding and Decoding with URL
+
+- It is used to encode and decode an URL.
+- The `getUrlEncoder()` method is used to encode the URL.
+
+```java
+String url = "https://www.google.com";
+String encodedString = Base64.getUrlEncoder().encodeToString(url.getBytes());
+```
+
+- The output will be:
+  
+```
+aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbQ==
+```
+
+
+
+
+
 
 
 
