@@ -1,4 +1,4 @@
-# Functional Interfaces (Single Abstract Method Interfaces)
+# Functional Interfaces (Single Abstract Method Interfaces - SAM)
 - A functional interface is an interface that has only one abstract method.
 - It can have any number of default and static methods.
 - It represents a single action.
