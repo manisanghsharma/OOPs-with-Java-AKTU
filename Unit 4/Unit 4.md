@@ -52,3 +52,30 @@ list.add(10); // AutoBoxing
 ```java
 list.add(new Integer(10));
 ```
+
+# Set Interface
+
+- The Set interface is a collection that does not allow duplicate elements.
+- The Set interface is implemented by the HashSet class, TreeSet class, and LinkedHashSet class.
+- `HashSet`: The HashSet class is an implementation of the Set interface that uses a hash table to store elements. It makes no guranatee about the order of the elements.
+- `TreeSet`: The TreeSet class is an implementation of the Set interface that uses a red-black tree to store elements. It stores elements in sorted order. It is slower than HashSet.
+- `LinkedHashSet`: The LinkedHashSet class is an implementation of the Set interface that uses a hash table to store elements. It maintains the insertion order of the elements.
+
+## Sorted Set
+- The SortedSet interface extends the Set interface and provides a way to store elements in sorted order.
+
+## Methods on Set
+- The Set interface provides the following methods:
+- `s1.containsAll(s2)`: Returns true if s1 contains all the elements of s2.
+- `s1.addAll(s2)`: Adds all the elements of s2 to s1.
+- `s1.retainAll(s2)`: Retains only the elements that are common in both s1 and s2.
+- `s1.removeAll(s2)`: Removes all the elements of s2 from s1.
+- `Remove(Object o)`: Removes the specified element from the set.
+- `Size()`: Returns the number of elements in the set.
+- `toArray()`: Returns an array containing all the elements of the set.
+- `iterator()`: Returns an iterator over the elements of the set.
+- `isEmpty()`: Returns true if the set is empty.
+- `equals(Object o)`: Returns true if the specified object is equal to the set.
+- `clear()`: Removes all the elements from the set.
+- `add(Object o)`: Adds the specified element to the set.
+
