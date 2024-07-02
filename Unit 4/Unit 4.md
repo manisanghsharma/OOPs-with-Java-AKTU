@@ -9,16 +9,16 @@
 - As soon as the Arraylist reaches the size of 12, it will multiply the size by 2.
 - Thus ArrayList is a dynamic Array.
 
-### Generic List
-- A generic ArrayList is a list that can store any type of data.
-- The generic ArrayList is defined as 
+### Non-Generic List
+- A non-generic ArrayList is a list that can store any type of data.
+- The non-generic ArrayList is defined as 
 ```java
 ArrayList list = new ArrayList<>();
 ```
 
-### Non-Generic List
-- A non-generic ArrayList is a list that can store only one type of data.
-- The non-generic ArrayList is defined as 
+### Generic List
+- A generic ArrayList is a list that can store only one type of data.
+- The generic ArrayList is defined as 
 ```java
 ArrayList<String> list = new ArrayList<>();
 ```
@@ -79,3 +79,45 @@ list.add(new Integer(10));
 - `clear()`: Removes all the elements from the set.
 - `add(Object o)`: Adds the specified element to the set.
 
+
+# Map
+- A map is an object that maps keys to values. A map cannot contain duplicate keys. Each key can be mapped to only one value.
+
+- There are 3 classes that implement the Map interface:
+- `HashMap`: The HashMap class is an implementation of the Map interface that uses a hash table to store key-value pairs. It makes no guarantee about the order of the elements.
+- To initialize a new HashMap, we can use the following syntax:
+```java
+Map<String, Integer> map = new HashMap<>() // Generic Map;
+```
+or
+```java
+HashMap map = new HashMap<>() // Non-Generic Map;
+```
+
+# Map Methods
+
+- `put(K key, V value)`: Adds the specified key-value pair to the map.
+- `get(Object key)`: Returns the value to which the specified key is mapped.
+- `containsKey(Object key)`: Returns true if the map contains the specified key.
+- `containsValue(Object value)`: Returns true if the map contains the specified value.
+- `Size()`: Returns the number of key-value pairs in the map.
+- `isEmpty()`: Returns true if the map is empty.
+
+# Comparable Interface and Comparator Interface
+
+- In java, the Comparable interface is used to define the natural ordering of objects. The natural ordering of objects is the order in which the objects are stored in the collection.
+
+## Comparable Interface
+- The Comparable interface is defined in the java.lang package.
+- The Comparable interface has only one method, compareTo().
+- Its purpose is to define the natural ordering of objects.
+
+- Implementing the Comparable interface:
+```java
+public interface Comparable<T> {
+    public int compareTo(T o);
+}
+```
+
+- A class that implements the Comparable interface must implement the compareTo() method. The compareTo() method compares the current object with the specified object.
+-  It returns a negative value if the current object is less than the specified object, a positive value if the current object is greater than the specified object, and zero if the current object is equal to the specified object.
